@@ -26,7 +26,11 @@ public class Main {
         System.out.println("Mi peso es: "+peso+"kg");
         System.out.println("Tengo experiencia: "+experiencia);
 
-        //ejercicios Tema 1
+        //Ejercicios Tema 1
+
+        System.out.println(nombre+"\n"+edad+"\n"+ciudad);
+
+        //Ejercicio 2
         int puntuacion = 0;
         System.out.println("Puntuacion incial: "+puntuacion);
         puntuacion = puntuacion + 5;
@@ -35,5 +39,8 @@ public class Main {
         System.out.println("Puntuacion despues de segunda modificacion: "+puntuacion);
         puntuacion = puntuacion + 5;
         System.out.println("Puntuacion final: "+puntuacion);
+
+        //Ejercicio 3
+
     }
 }

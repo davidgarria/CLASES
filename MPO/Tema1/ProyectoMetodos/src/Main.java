@@ -1,3 +1,5 @@
+import java.lang.reflect.AnnotatedArrayType;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -6,12 +8,13 @@ public class Main {
         saludar("Borja");
         saludar("Maria");
 
-        int numero;
         Operaciones operacionesMatematicas = new Operaciones();
         operacionesMatematicas.sumar(1,2);
-        operacionesMatematicas.restar(1,2);
-        operacionesMatematicas.multiplicar(1,2);
-        operacionesMatematicas.dividir(1,2);
+        operacionesMatematicas.restar(1,5);
+        operacionesMatematicas.multiplicar(2,8);
+        operacionesMatematicas.dividir(8,5);
+        operacionesMatematicas.rectangulo(5,10);
+
     }
 
     public static void saludar(String nombre){
@@ -20,5 +23,7 @@ public class Main {
         System.out.println("Vamos a practicar el llamado de metodos");
         System.out.println("Animo!");
     }
+
+
 
 }
