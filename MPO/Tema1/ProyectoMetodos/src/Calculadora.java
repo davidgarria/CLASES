@@ -1,6 +1,9 @@
-public class Operaciones {
+import java.util.Scanner;
 
-    public void sumar(int op1, int op2){
+public class Calculadora {
+Scanner scanner = new Scanner(System.in);
+
+        public void sumar(int op1, int op2){
         int resultado = op1+op2;
         System.out.println("El resultado de la suma es: "+resultado);
     }
@@ -25,4 +28,12 @@ public class Operaciones {
         System.out.println("Si la base de un rectangulo es "+base+"cm y su altura es "+altura+"cm, entonces su area será de "+resultado+"cm");
     }
 
+    public int multiplicar2(int num1, int num2) {
+        int resultado = num1 * num2;
+        return resultado;
+    }
+
+    public boolean validarNumero (int numeroValidar){
+        return numeroValidar>0;
+    }
 }
