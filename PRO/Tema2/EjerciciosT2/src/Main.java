@@ -12,6 +12,5 @@ public class Main {
         //ejercicio.ejercicio7();
         //ejercicio.ejercicio8();
 
-
     }
 }

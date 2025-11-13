@@ -5,12 +5,12 @@ public class Ejercicio {
 
     public void ejercicio1(){
     /* Hágase una aplicación que permita introducir el número de bebidas y bocadillos
-comprados (valores entre 0 y 20). Además se podrá introducir el precio de cada
-bebida (valor entre 0.00 € y 3.00 €) y de cada bocadillo (valor entre 0.00 € y 5.00
-€). También se podrá introducir el número de alumnos que realizaron la compra
-(valor entre 0 y 10). Se mostrará el total de la compra (con el subtotal de las
-bebidas y de los bocadillos) y la cantidad que debe pagar cada alumno
-redondeada a 2 decimales. (CosteBar) */
+    comprados (valores entre 0 y 20). Además se podrá introducir el precio de cada
+    bebida (valor entre 0.00 € y 3.00 €) y de cada bocadillo (valor entre 0.00 € y 5.00
+    €). También se podrá introducir el número de alumnos que realizaron la compra
+    (valor entre 0 y 10). Se mostrará el total de la compra (con el subtotal de las
+    bebidas y de los bocadillos) y la cantidad que debe pagar cada alumno
+    redondeada a 2 decimales. (CosteBar) */
         scanner = new Scanner(System.in);
         System.out.println("Cantidad de bocadillos comprados: ");
         int cantidadBocadillos = scanner.nextInt();
