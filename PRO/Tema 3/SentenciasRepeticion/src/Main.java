@@ -6,7 +6,12 @@ public class Main {
         //sentenciaFor.tablaMultiplicarNumero(7);
         //sentenciaFor.todasTablas();
         //sentenciaFor.dibujarCuadrado();
+        //sentenciaFor.esPalindromo("Alli ves Sevilla");
+        //sentenciaFor.calcularFactorial(7);
+        //sentenciaFor.recorrerColeccion();
 
+        SentenciaWhile sentenciaWhile = new SentenciaWhile();
+        sentenciaWhile.evaluacionNumero();
 
     }
 

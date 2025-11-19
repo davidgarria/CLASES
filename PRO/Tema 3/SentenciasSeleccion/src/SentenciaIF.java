@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class SentenciaIF {
 
     public void examenAprobado(int nota){

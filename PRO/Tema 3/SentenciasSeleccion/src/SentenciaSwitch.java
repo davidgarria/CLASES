@@ -109,4 +109,5 @@ public class SentenciaSwitch {
         System.out.printf("El resultado de la operacion es %.1f%n", resultado);
     }
 
+
 }
