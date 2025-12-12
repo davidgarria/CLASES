@@ -8,12 +8,20 @@ public class Bonoloto {
     private int aciertos = 0;
 
     public void iniciarJuego(){
-        // Al iniciar el juego pasan dos cosas
+        // Reiniciar números y aciertos para más partidas
+        numeroSistema = new int[5];
+        numeroUsuario = new int[5];
+        aciertos = 0;
         // 1. Sale de la máquina 5 números que serán los números del sistema 0-20.
         // No se pueden repetir números, si se repiten, se vuelve a escoger otro número
-        aciertos = 0;
+
         for (int i = 0; i < 5; i++){
-            numeroSistema[i] = (int) (Math.random()*21);
+            int numero;
+            do{
+                numero = (int) (Math.random()*21);
+            } while (buscarCoincidencia(numero,numeroSistema));
+            numeroSistema[i] = numero;
+
         }
 
         // 2. Se le piden 5 números al usuario
@@ -26,20 +34,16 @@ public class Bonoloto {
                 numeroIntroducido = scanner.nextInt();
                 if (numeroIntroducido < 0 || numeroIntroducido > 20){
                     System.out.println("Número fuera de rango, introduce otro número");
-                }
-                for (int j = 0; j < i; j++) {
-                    if (numeroUsuario[j] == numeroIntroducido){
-                        System.out.println("Número repetido, introduce otro número.");
-                        repetido = true;
-                        break;
-                    }
+                } else if (buscarCoincidencia(numeroIntroducido,numeroUsuario)){
+                    System.out.println("Número repetido, introduce otro número.");
+                    repetido = true;
                 }
             } while (numeroIntroducido < 0 || numeroIntroducido > 20 || repetido);
             numeroUsuario[i] = numeroIntroducido;
         }
 
         for (int item : numeroUsuario){
-            buscarNumero(item);
+            buscarAcierto(item);
         }
 
         listarNumerosUsuario();
@@ -49,7 +53,7 @@ public class Bonoloto {
 
     }
 
-    public void buscarNumero(int numero){
+    public void buscarAcierto(int numero){
         for (int item : numeroSistema){
             if (item == numero){
                 aciertos++;
@@ -61,7 +65,7 @@ public class Bonoloto {
     public void listarNumerosSistema(){
         System.out.println("Los números del sistema son: ");
         for (int item : numeroSistema){ // el Foreach solo sirve para lectura de colecciones
-            System.out.printf("%d ",item);
+            System.out.printf("%d\t",item);
         }
         System.out.println();
     }
@@ -69,13 +73,13 @@ public class Bonoloto {
     public void listarNumerosUsuario(){
         System.out.println("Los números del usuario son: ");
         for (int item: numeroUsuario){
-            System.out.printf("%d ",item);
+            System.out.printf("%d\t",item);
         }
         System.out.println();
     }
 
-    public boolean buscarCoincidencia(int numero){
-        for (int item : numeroSistema){
+    public boolean buscarCoincidencia(int numero, int[] lugar){
+        for (int item : lugar){
             if (item == numero){
                 return true;
             }
