@@ -1,0 +1,7 @@
+Esto es un ejemplo de lectura de fichero
+Esto es otra linea en el fichero
+Los flujos de ficheros:
+    Entrantes: lecturas -> obtengo el contenido
+    Salientes: escrituras -> saco el contenido
+
+    File -> carpeta (directory/file)
